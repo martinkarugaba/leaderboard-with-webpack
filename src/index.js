@@ -3,8 +3,7 @@ import './style.css';
 const form = document.querySelector('.my-form');
 const scores = document.querySelector('.scores');
 const refreshButton = document.querySelector('.refresh-button');
-const url =
-  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/YEAvQ6zG03AQr1KuppzL/scores';
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/YEAvQ6zG03AQr1KuppzL/scores';
 
 const sendScore = async (game) => {
   await fetch(url, {
@@ -16,24 +15,11 @@ const sendScore = async (game) => {
   });
 };
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.querySelector('#name');
-  const score = document.querySelector('#score');
-  const game = {
-    user: name.value,
-    score: score.value,
-  };
-  sendScore(game);
-  form.reset();
-});
-
-// id = YEAvQ6zG03AQr1KuppzL
-
 const fetchScores = async () => {
   const response = await fetch(url);
   const data = await response.json();
-  const result = data.result;
+  const { result } = data;
+
   const scoresList = result.map((item) => {
     const { user, score } = item;
     return `<div class='score-wrapper'>
@@ -45,4 +31,21 @@ const fetchScores = async () => {
   scores.innerHTML = scoresList.join(' ');
 };
 
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.querySelector('#name');
+  const score = document.querySelector('#score');
+  const game = {
+    user: name.value,
+    score: score.value,
+  };
+  sendScore(game);
+  fetchScores();
+  form.reset();
+});
+
+// id = YEAvQ6zG03AQr1KuppzL
+
 refreshButton.addEventListener('click', fetchScores);
+
+window.onload = fetchScores();
