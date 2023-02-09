@@ -15,7 +15,7 @@ h1 {
   margin-left: 15rem;
 }
 
-h2{
+h2 {
   font-weight: 500;
   font-size: 2rem;
 }
@@ -28,25 +28,26 @@ h2{
   gap: 5rem;
 }
 
-.content header{
+.content header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.form-heading{
+.form-heading {
   margin-bottom: 1rem;
 }
 
-.refresh-button, .submit-button{
+.refresh-button,
+.submit-button {
   margin-left: 1rem;
   border: 2px solid black;
   padding: 0.4rem 0.5rem;
-  box-shadow: 3px 3px 0 0px black;
+  box-shadow: 3px 3px 0 0 black;
   cursor: pointer;
 }
 
-.submit{
+.submit {
   display: flex;
   justify-content: end;
 }
@@ -57,7 +58,7 @@ h2{
   margin-top: 1rem;
 }
 
-.scores p{
+.scores p {
   padding: 0.5rem 0.3rem;
 }
 
@@ -65,7 +66,7 @@ h2{
   background-color: #ccc;
 }
 
-form input{
+form input {
   margin-bottom: 1.5rem;
   padding: 0.5rem 0.5rem;
   font-size: 1rem;
