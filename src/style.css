@@ -62,8 +62,15 @@ h2 {
   padding: 0.5rem 0.3rem;
 }
 
-.scores p:nth-child(even) {
+.scores .score-wrapper:nth-child(even) {
   background-color: #ccc;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
 }
 
 form input {
