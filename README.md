@@ -20,7 +20,7 @@
 
 # 📖 [About the Project] <a name="about-project"></a>
 
-**[awesome books]** is a project that displays a list of books.
+**[Leaderboard]** is a project that allows you to submit your scores and then produces the scores on on a list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
