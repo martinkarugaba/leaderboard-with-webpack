@@ -1,4 +1,51 @@
-h1{
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 2rem;
+}
+
+h1 {
   font-size: 4rem;
+}
+
+.content {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.content header{
+  display: flex;
+}
+
+.refresh-button{
+  margin-left: 1rem;
+  border: 2px solid black;
+  padding: 0.3rem 0.5rem;
+}
+
+.scores {
+  border: 4px solid black;
+  width: 400px;
+  margin-top: 1rem;
+
+}
+
+.scores p{
+  padding: 0.5rem 0.3rem;
+}
+
+.scores p:nth-child(even) {
+  background-color: #ccc;
+}
+
+form button{
+
 }
