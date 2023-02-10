@@ -24,7 +24,7 @@ const fetchScores = async () => {
     const { user, score } = item;
     return `<div class='score-wrapper'>
               <div class='score'>
-                <p>${user}:</p><p>${score}</p>
+                <p>${user}</p><p>:${score}</p>
               </div>
             </div>`;
   });
